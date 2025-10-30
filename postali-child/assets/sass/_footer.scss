@@ -1,0 +1,206 @@
+/**
+ * Footer Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+footer {
+    .logo-container {
+        margin-bottom: 25px;
+        @include respond(small-phone) {
+            max-width: 100% !important;
+        }
+        .custom-logo {
+            filter: invert(1) brightness(2);
+            margin-right: 20px !important;
+        }
+        p {
+            color: $white;
+        }
+    }
+    #pre-footer {
+        background-image: url('/wp-content/uploads/2023/01/background-icon-logo-teal.svg');
+        background-repeat: no-repeat;
+        background-size: 525px;
+        background-position: bottom -75px right -125px;
+        @include respond(tab-port) {
+            background-position: bottom -60px left -180px;
+        }
+        & > .container > .columns > .column-75.direction-col {
+            @include respond(tab-port) {
+                padding-bottom: 300px;
+            }
+            
+        }
+        .cta-wrapper {
+            .divide {
+                display: block;
+                width: 2px;
+                height: 88px;
+                background: $white;
+                margin: 0 40px 0 20px;
+            }
+        }
+    }
+    #copyright {
+        .columns {
+            .column-33, .column-66 {
+                @include respond(tab-port) {
+                    flex-direction: column !important;
+                }
+            }
+        } 
+        #menu-footer-menu {
+            padding: 0;
+            margin: 0;
+            @include respond(tab-port) { 
+                margin: 0;
+            }
+            li {
+                padding-bottom: 5px;
+                list-style-type: none;
+                margin: 0;
+                a {
+                    text-decoration: underline;
+                    font-weight: $black;
+                    font-size: 1.6rem;
+                    position: relative;
+                    display: inline-flex;
+                    align-items: center;
+                    margin-bottom: 0;
+                    &:after {
+                        content: "";
+                        background-image: url('/wp-content/uploads/2023/01/drw-chevron-right.svg');
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        width: 13px;
+                        height: 13px;
+                        filter: invert(1);
+                        position: absolute;
+                        right: -20px;
+                    }
+                }
+            }
+        }
+        .column-stretch {
+            align-items: stretch !important;
+            @include respond(tab-port) {
+                align-items: center !important;
+            }
+            .column-33 {
+                .footer-nav {
+                    align-self: flex-start;
+                    height: 100%;
+                }
+                .footer-award-wrapper {
+                    width: fit-content;
+                    height: fit-content;
+                    position: absolute;
+                    bottom: 175px;
+                    left: -13px;
+                    @include respond(tab-port) {
+                        position: relative;
+                        bottom: 0;
+                        left: -20px;
+                        margin-bottom: 50px;
+                    }
+                    img {
+                        width: 125px;
+                        height: auto;
+                        object-fit: contain;
+                        margin: 0 0 0 auto;
+                    }
+                }
+            }
+        }
+        .contact-info-wrapper {
+            @include respond(med-device) {
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+            .column-50 {
+                @include respond(med-device) {
+                    width: 100%;
+                    &:first-of-type {
+                        margin-bottom: 50px;
+                    }
+                }   
+            }
+            .contact-info {
+                @include contact-info();
+                height: 100%;
+                h4 {
+                    margin-bottom: 15px !important;
+                }
+                & > .columns {
+                    &:last-of-type {
+                        flex-grow: 1;
+                        iframe {
+                            align-self: flex-end;
+                            @include respond(phone) {
+                                left: 0 !important;
+                            }
+                        }
+                    }
+                }
+                @media screen and (max-width: $med-device) {
+                    .directions a {
+                        margin-bottom: 20px !important;
+                    }
+                }
+            }
+            iframe {
+                height: 300px;
+                width: 100%;
+                padding: 0;
+                @include respond(med-device) {
+                    padding-left: 0;
+                }
+                @include respond(phone) {
+                    width: 107vw;
+                    position: relative;
+                    left: -35px;
+                }
+            }
+        }
+
+        .copyright {
+            font-size: 1.2rem;
+            line-height: 2.5rem;
+            margin-top: 50px;
+        }
+        .footer-resources {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            #menu-footer-resources {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin: 0;
+                flex-wrap: wrap;
+                li {
+                    list-style-type: none;
+                    margin: 0;
+                    a {
+                        font-size: 1.4rem;
+                        margin: 0;
+                        padding: 0;
+                        text-decoration: underline;
+                        margin-right: 5px;
+                        padding-right: 5px;
+                        border-right: solid 1px $white;
+                    }
+                }
+            }
+            p {
+                font-size: 1.4rem;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+    }
+}

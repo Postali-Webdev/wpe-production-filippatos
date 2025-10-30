@@ -1,0 +1,233 @@
+{
+    "key": "group_63a4738ea4e49",
+    "title": "Template: Single Post",
+    "fields": [
+        {
+            "key": "field_63a4738f54238",
+            "label": "Hero",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_63a473dc54239",
+            "label": "Title",
+            "name": "title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63a473fa5423a",
+            "label": "Banner Image",
+            "name": "banner_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Appears to the right of the title.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_63b6f3796f310",
+            "label": "Author",
+            "name": "author",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "If no selection is made, the author will default to Parisis G. Filippatos",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "attorneys"
+            ],
+            "taxonomy": "",
+            "return_format": "",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_63a4741d5423b",
+            "label": "Body",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_63a474895423c",
+            "label": "Main Copy",
+            "name": "main_copy",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Add all post copy here.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_63a474b05423d",
+            "label": "Related Articles",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Related Articles are auto-generated based on this posts category.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_63a475215423e",
+            "label": "Related LInks",
+            "name": "related_links",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Blog Category, Related Practice Area, and the Author's bio are all auto-generated. You can add up to 3 more related links (for a total of 6).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 3,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_63a475335423f",
+                    "label": "Related Link",
+                    "name": "related_link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_63a475215423e"
+                }
+            ]
+        },
+        {
+            "key": "field_6419939213987",
+            "label": "Closing CTA",
+            "name": "closing_cta",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Use this field to include a Call Us title followed by a CTA paragraph. <span style=\"color:#ff0000;\">Notice!<\/span> You will need to tailor the first part of the paragraph, up to the \"call us at\" section, to match the blog post's subject.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<h3>Call a New York Employment Law Attorney Now<\/h3>\r\n<p>We at Filippatos PLLC stand in proud solidarity with any and all workers facing discrimination in the workplace, including the LGBTQIA+ community and diverse communities. We believe that all people deserve the right to exist freely, no matter who they love, how they express their gender, practice their religion, or celebrate their heritage. If you are experiencing discrimination at work, please give us a call at <a title=\"call our office at 9 1 4 9 8 4 1 1 1 1\" href=“tel:9149841111”>888-9-JOBLAW<\/a> for a free consultation. We will do our utmost to help secure you the justice you deserve.<\/p>",
+            "allow_in_bindings": 1,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "featured_image"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1760019060
+}

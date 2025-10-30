@@ -1,0 +1,139 @@
+{
+    "key": "group_63a4499562f45",
+    "title": "CPT: Testimonial",
+    "fields": [
+        {
+            "key": "field_63a4499580ae3",
+            "label": "Title",
+            "name": "testimonial_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63a449c780ae4",
+            "label": "Author",
+            "name": "testimonial_author",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63a449d980ae5",
+            "label": "Description",
+            "name": "testimonial_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_64b96a0ff3336",
+            "label": "Short Description (Optional)",
+            "name": "testimonial_short_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "This will appear as the description for the Testimonials widget on other templates such as the Front Page. If left empty, the main description will be used.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_63a449fd80ae6",
+            "label": "Review Source",
+            "name": "testimonial_review_source",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "google": "Google",
+                "facebook": "Facebook",
+                "avvo": "Avvo",
+                "martindale": "Martindale-Hubbell",
+                "findlaw": "Findlaw",
+                "yelp": "Yelp",
+                "lawyers": "Lawyers.com",
+                "unknown": "Unknown"
+            },
+            "default_value": "",
+            "return_format": "label",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "testimonials"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "featured_image"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1689873082
+}

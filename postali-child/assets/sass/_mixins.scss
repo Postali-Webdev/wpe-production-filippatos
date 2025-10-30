@@ -1,0 +1,347 @@
+/**
+ * Theme footer
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+@mixin drop-down-select {
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 42px;
+    margin: 0;
+    @include respond(tab-port) {
+        margin-bottom: 20px;
+    }
+    @include respond(lg-phone) {
+        width: 98%;
+    }
+    #select-box {
+        #options-view-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            opacity: 0;
+            cursor: pointer;
+            z-index: 3;
+            &:checked ~ #options {
+                border: 1px solid #e2eded;
+                border-color: #eaf1f1 #e4eded #dbe7e7 #e4eded;
+                height: auto;
+            }
+            &:checked ~ #options a {
+                padding: 12px 14px;    
+                margin: 0;
+                overflow: hidden;
+            }
+            &:checked ~ #options #option-bg { display: block; }
+        }
+        #select-button {
+            position: relative;
+            height: 16px;
+            padding: 25px 14px;
+            background: $ming;
+            cursor: pointer;
+            height:100%;
+            width: 550px;
+            border-radius: 9px;
+            @include respond(lg-phone) {
+                width: 100%;
+            }
+            #selected-value {
+                font-size: 1.6rem;
+                line-height: 100%;
+                text-align: center;
+                font-family: $lato;
+                margin-top: -5px;
+                color: $white;
+            }
+            #chevrons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 12px;
+                padding: 9px 14px;
+                &:after {
+                    content: "";
+                    background: url('/wp-content/uploads/2023/01/drw-chevron-right.svg') no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    height: 20px;
+                    width: 20px;
+                    position: absolute;
+                    transform: rotate(90deg);
+                    -webkit-filter: invert(1);
+                            filter: invert(1);
+                }
+            }
+        }
+        #options {
+            overflow: hidden;
+            position: absolute;
+            top: 42px;
+            left: 0;
+            width: 578px;
+            height: 0;
+            margin: 0 auto;
+            background-color: $ming;
+            z-index: 2;
+            padding: 0;
+            z-index: 2 !important;
+            border: 0 !important;
+            color:$white !important;
+            border-radius: 0 0 9px 9px;
+            @include respond(lg-phone) {
+                width: calc(100% + 28px);
+            }
+            .options {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                color:$white !important;
+                a {
+                    display: block;
+                    width: 100%;
+                    padding: 0;
+                    color:$white !important;
+                }
+            }
+        }
+    }
+
+    .option, .label {
+        color: $white;
+        font-size: 1.6rem;
+    }
+    
+    .option {
+        color: $white;
+        position: relative;
+        line-height: 1;
+        z-index: 2;
+        text-align: center;
+        padding: 0;
+        width: 100%;
+        &:hover { 
+            background: $dk-teal;
+            a {
+                color: $white; 
+            }
+        }
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        margin: 0;
+        color:$white;
+        font-family: $lato;
+        font-size: 1.6rem;
+        transition: 0.3s ease all;
+        padding: 12px 14px;
+        &:hover {
+             background-color: $dk-teal; 
+        }
+    }
+
+    @-webkit-keyframes moveup {
+        0%{ bottom: -25px; opacity: 0;}
+        100%{ bottom: 0; opacity: 1;}
+    }
+
+    @keyframes moveup {
+        0%{ bottom: -25px; opacity: 0;}
+        100%{ bottom: 0; opacity: 1;}
+    }
+
+    @-webkit-keyframes movedown {
+        0%{ top: -25px; opacity: 0;}
+        100%{ top: 0; opacity: 1;}
+    }
+
+    @keyframes movedown {
+        0%{ top: -25px; opacity: 0;}
+        100%{ top: 0; opacity: 1;}
+    }
+
+    #option-bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 40px;
+        transition: 0.3s ease all;
+        z-index: 1;
+        display: none;
+    }
+}
+
+@mixin related-posts() {
+    margin: 0 auto;
+    h2 {
+        margin: 0 0 25px 0;
+    }
+    .card-holder {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 50px;
+    }
+}
+
+@mixin banner-hero() {
+    background: $dk-teal;
+    min-height: 400px;
+    position: relative;
+    display: block;
+    @include respond(tab-land) {
+        padding-bottom: 100px;
+    }
+    .hero-wrapper {
+        @include respond(tab-port) {
+            margin-top: 125px;
+        }
+        h1 {
+            @include respond(tab-port) {
+                text-align: center;
+            }
+        }
+        .cta-wrapper {
+            @include respond(tab-port) {
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 100px;
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .banner-img img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: right;
+           object-position: right;
+        @include respond(tab-land) {
+            height: 100%;
+        }
+    }
+}
+
+@mixin contact-info() {
+    .columns {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        img {
+            margin-right: 15px;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+        p {
+            flex-shrink: 1;
+        }
+        .directions {
+            p {
+                margin-bottom: 0;
+            }
+            a {
+                text-decoration: underline;
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: -webkit-fit-content;
+                width: -moz-fit-content;
+                width: fit-content;
+                color: $lt-grey;
+                font-size: 1.6rem;
+                @include respond(med-device) {
+                    margin-bottom: 50px;
+                }
+                &:after {
+                    content: "";
+                    background-image: url('/wp-content/uploads/2023/01/drw-chevron-right.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 13px;
+                    height: 13px;
+                    -webkit-filter: invert(1);
+                            filter: invert(1);
+                    position: absolute;
+                    right: -20px;
+                }
+            }
+        }
+    }
+}
+
+@mixin wp_default_search() {
+    input {
+        background: none;
+        border: 0;
+        border-bottom: solid 2px $ming;
+        font-family: $lexend;
+        font-weight: $bold;
+        color: $ming;
+        padding: 5px 10px;
+        font-size: 1.6rem;
+    }
+    button[type="submit"] {
+        cursor: pointer;
+        border: 0;
+        background: url('/wp-content/themes/postali-child/assets/img/icon-search.svg') no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 18px;
+        width: 18px;
+        -webkit-filter: invert(43%) sepia(7%) saturate(2307%) hue-rotate(136deg) brightness(75%) contrast(81%);
+                filter: invert(43%) sepia(7%) saturate(2307%) hue-rotate(136deg) brightness(75%) contrast(81%);
+    }
+}
+
+@mixin respond($breakpoint) {
+    @if ($breakpoint==desktop-lg) {
+        @media screen and (min-width:$desktop-lg) { @content; }
+    }
+    @if ($breakpoint==desktop-md) {
+        @media screen and (max-width:$desktop-md) { @content; }
+    }
+    @if ($breakpoint==desktop) {
+        @media screen and (max-width:$desktop) { @content; }
+    }
+    @if ($breakpoint==tab-land) {
+        @media screen and (max-width:$tab-land) { @content; }
+    }
+    @if ($breakpoint==med-device) {
+        @media screen and (max-width:$med-device) { @content; }
+    }
+    @if ($breakpoint==tab-port) {
+        @media screen and (max-width:$tab-port) { @content; }
+    }
+    @if ($breakpoint==tab-mini) {
+        @media screen and (max-width:$tab-mini) { @content; }
+    }
+    @if ($breakpoint==lg-phone) {
+        @media screen and (max-width:$lg-phone) { @content; }
+    }
+    @if ($breakpoint==phone) {
+        @media screen and (max-width:$phone) { @content; }
+    }
+    @if ($breakpoint==small-phone) {
+        @media screen and (max-width:$small-phone) { @content; }
+    }
+}

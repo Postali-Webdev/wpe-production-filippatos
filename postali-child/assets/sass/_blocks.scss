@@ -1,0 +1,510 @@
+// Attorney Slider
+#attorney-slider {
+    width: 100%;
+    max-width: calc(100% - 310px);
+    @include respond(tab-mini) {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    @include respond(phone) {
+        margin: 0 0 0 auto;
+    }
+    .slick-list {
+        @include respond(phone) {
+            padding:0 20% 0 0 !important;
+        }
+        .slick-track {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+    }
+    
+    .single-attorney {
+        height: auto;
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        cursor: pointer;
+        text-align: left;
+        position: relative;
+        
+        @include respond(phone) {
+            margin: 0 10px 0 0;
+            width: 100%;
+            padding: 0;
+        }
+        @media screen and (max-width: 450px) {
+            margin-right: 25px;
+        }
+
+        .attorney-wrap {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                top: 345px;
+                right: 20px;
+                content: "";
+                height: 35px;
+                width: 35px;
+                background: url(/wp-content/uploads/2022/12/bubble-arrow-right.svg);
+                background-size: cover;
+            }
+        }
+
+        .attorney-img img, .attorney-img {
+            background: $ming;
+            // width: 300px;
+            width: 100%;
+            height: 400px;
+            -o-object-fit: contain;
+               object-fit: contain;
+            -o-object-position: right bottom;
+               object-position: right bottom;
+            padding: 0;
+            border-radius: 23px;
+            margin-bottom: 25px;
+        }
+        .name {
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 2rem;
+            line-height: 2rem;
+            color: $dk-teal;
+            font-family: $lexend;
+            font-weight: $bold;
+            max-width: 200px;
+            text-decoration: none !important;
+        }
+        .title {
+            font-size: 1.6rem;
+            line-height: 1.6rem;
+            color: $dk-teal;
+            font-family: $lato;
+            text-decoration: none !important;
+
+            span {
+                display: block;
+                font-style: italic;
+                margin-top: 5px;
+                color: #999;
+            }
+        }
+    }
+     .slick-arrow {
+        &.slick-next {
+            right: -360px !important;
+            z-index: 3;
+        }
+        &.slick-prev {
+            z-index: 3;
+        }
+        @include respond(tab-port) {
+            &.slick-next {
+                right: -320px !important;
+            }
+            &.slick-prev {
+                left: 0 !important;
+            }
+        }
+        @include respond(tab-mini) {
+            &.slick-prev {
+                left: 0px !important; 
+                z-index: 2;
+            }
+            &.slick-next {
+                right: 0px !important;
+                z-index: 2;
+            }
+        }
+        @include respond(lg-phone) {
+            top: unset;
+            bottom: -50px !important;
+            &.slick-prev {
+                right: 75px !important;
+                left: unset !important;
+            }
+            &.slick-next {
+                right: 25px !important;
+                left: unset !important;
+                &:before {
+                    content: "" !important;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 50px;
+                    height: 50px;
+                    background: $white;
+                    z-index:12;
+                }
+            }
+        }
+    }
+}
+.careers-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 400px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: right bottom;
+       object-position: right bottom;
+    padding: 0;
+    border-radius: 23px;
+    margin-bottom: 25px;
+    background: $ming;
+    z-index: 4;
+    text-decoration: none !important;
+    @include respond(med-device) {
+        right: 50px;
+    }
+    @include respond(tab-mini) {
+        position: relative;
+        right: unset;
+    }
+    @include respond(lg-phone) {
+        position: relative;
+        right: unset;
+        left: -15px;
+        top: 75px;
+        width: calc(100% - 60px);
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 300px;
+        margin-bottom: 50px;
+    }
+    @include respond(small-phone) {
+        width: 100%;
+    }
+    .career-title {
+        color: $white;
+        font-size: 30px;
+        font-family: $lexend;
+        font-weight: $bold;
+        width: 135px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        @include respond(lg-phone) {
+            margin: 0 20px;
+            width: auto;
+        }
+        &:hover {
+            color: $white;
+        }
+    }
+    .btn {
+        margin-left: 20px;
+        @include respond(lg-phone) {
+            margin-left: 0;
+        }
+    }
+}
+
+// Awards Slider Block
+.awards-wrapper {
+    #top-awards-slider, #bottom-awards-slider {
+        margin: 15px 0;
+        .award {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: $ming;
+            width: 450px;
+            height: 220px;
+            border-radius: 23px;
+            a.btn.plus {
+                position: absolute;
+                bottom: 12px;
+                right: 12px;
+                margin: 0;
+                padding: 0px 25px;
+            }
+            .award-icon, .award-icon img {
+                height: 90px;
+                width: 70%;
+                -o-object-fit: contain;
+                   object-fit: contain;
+                margin: 0 auto;
+            }
+            .award-icon#advisory-board-gerry-2024 {
+                img {
+                    position: relative;
+                    height: 150px;
+                    top: -25px;
+                }
+            }
+        }
+    }
+    #top-awards-slider {
+        margin-bottom: 30px;
+        .award {
+            margin-left: 30px;
+            position: relative;
+            left: -100px;
+        }
+    }
+    #bottom-awards-slider {
+        .award {
+            margin-right: 30px;
+            position: relative;
+            right: -100px;
+        }
+    }
+}
+
+// Featured/Related Posts Slider
+h4.related-blogs-title {
+    margin-top: 80px;
+}
+
+.featured-posts-container {
+    width: 100%;
+    @include respond(desktop-md) {
+        width: 90%;
+        margin: 80px auto 0 auto;
+    }
+    @include respond(tab-land) {
+        padding-bottom: 75px;
+        width: 100%;
+    }
+    &.grid-1 {
+        .slick-track {
+            margin-left: 0 !important;
+            margin-right: auto;
+        }
+    }
+    .slick-list {
+        @include respond(lg-phone) {
+            padding:0 20% 0 0 !important;
+        }
+    }
+    .featured-post {
+        margin: 0 10px;
+        border-radius: 15px;
+        background: white;
+        cursor: pointer;
+        .date {
+            font-size: 1.4rem;
+            font-style: italic;
+        }
+        img {
+            width: 100%;
+            height: 225px;
+            -o-object-fit: cover;
+               object-fit: cover;
+            border-radius: 15px;
+        }
+        .copy {
+            background: $white;
+            padding: 10px 30px 30px;
+            border-radius: 15px;
+            height: 225px;
+        }
+        .category {
+            margin-bottom: 5px;
+            line-height: 1.5rem;
+            * {
+                color: $terracotta !important;
+                font-size: 1.6rem;
+                font-family: $merriweather;
+                font-style: italic;
+                @include respond(desktop-md) {
+                    font-size: 1.4rem;
+                    line-height: 1.5rem;
+                }
+            }
+            a {
+                text-decoration: none !important;
+                &:hover {
+                    color: $dk-teal !important;
+                }
+            }
+        }
+        .blog-title, .blog-title a {
+            text-decoration: none !important;
+            font-size: 2.5rem;
+            line-height: 3rem;
+            @include respond(desktop-md) {
+                font-size: 1.8rem;
+                line-height: 2.5rem;
+            }
+        }
+    }
+    .slick-arrow {
+        @include respond(tab-land) {
+            top: unset;
+            left: unset !important;
+            bottom: 0px;
+        }
+        &.slick-prev {
+            left: -50px;
+            @include respond(tab-land) {
+                
+                right: 75px !important;
+            }
+            
+        }
+        &.slick-next {
+            right: -50px;
+            @include respond(tab-land) {
+                right: 25px;
+            }
+        }
+    }
+}
+
+// Cases Won Block
+.cases-won-wrapper {
+    margin-top: 50px;
+    .total-panel {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 201px;
+        @include respond(tab-port) {
+            position: relative;
+            top: unset;
+            margin-bottom: 30px;
+        }
+        .card-total-result {
+            color: $terracotta;
+        }
+        .results-counter {
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 390px;
+            height: 420px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            @include respond(phone) {
+                width: 300px;
+                height: 322px;
+                background-size: contain;
+            }
+            @include respond(small-phone) {
+                width: 260px;
+                height: 280px;
+            }
+            .total {
+                position: absolute;
+                z-index: 2;
+                top: 251px;
+                @include respond(phone) { 
+                    top: 190px;
+                }
+                @include respond(small-phone) {
+                    top: 165px;
+                }
+                p {
+                    font-weight: $bold;
+                    font-size: 43px;
+                    @include respond(phone) {
+                        font-size: 38px;
+                    }
+                    @include respond(small-phone) {
+                        font-size: 35px;
+                    }
+                }
+            }
+            .case-amounts-wrapper {
+                position: relative;
+                top: 346px;
+                width: 335px;
+                position: absolute;
+                z-index: 2;
+                @include respond(phone) { 
+                    top: 260px;
+                    width: 258px;
+                }
+                @include respond(small-phone) {
+                    top: 226px;
+                    width: 223px;
+                }
+                .case-amounts-scroller {
+                    .slick-list {
+                        padding: 0 23% !important;
+                    }
+                    p {
+                        color: $white !important;
+                        font-size: 30px;
+                        text-transform: uppercase;
+                        font-weight: $thin;
+                        text-align: center;
+                        font-family: $lexend;
+                        @include respond(phone) { 
+                            font-size: 25px;
+                        }
+                        @include respond(small-phone) {
+                            font-size: 23px;
+                        }
+                    }
+                }
+            }
+        }
+    }   
+    .stacking-panel {
+        .result {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+            background: $ming;
+            padding: 20px 50px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            height: auto;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 201px;
+            @include respond(tab-port) {
+                top: unset;
+                position: relative;
+            }
+            @include respond(phone) {
+                padding: 40px 20px 20px 20px;
+            }
+            h3 {
+                color: $white !important;
+                margin-bottom: 20px;
+                @include respond(med-device) {
+                    font-size: 2.4rem;
+                }
+            }
+            .amount {
+                background: $dk-teal;
+                color: $terracotta !important;
+                border-radius: 22px;
+                padding: 2px 20px;
+                font-style: italic;
+                font-family: $merriweather;
+                font-size: 2rem;
+            }
+            .description, .description a {
+                color: $white !important;
+                font-size: 1.5rem;
+                line-height: 2.3rem;
+            }
+            &.all-results {
+                background: $dk-teal;
+                align-items: center;
+                cursor: pointer;
+                min-height: 225px;
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+/**
+ * Sass variables and functions.
+ *
+ * @package Postali Child
+ * @author Postali LLC
+ */
+
+// Breakpoints 2.0
+$desktop-lg: 1920px;
+$desktop-md: 1600px;
+$desktop: 1200px;
+$tab-land: 1024px;
+$med-device: 992px;
+$tab-port: 820px;
+$tab-mini: 767px;
+$lg-phone: 667px;
+$phone: 600px;
+$small-phone: 375px;
+
+// Containers
+$container-max-width: $desktop-lg;
+$container-padding:30px;
+
+// Transitions
+$transition-speed:.3s;
+$transition-fast:.3s ease-in-ease-out;
+$transition-slow:.5s ease-in-ease-out;
+
+// Core Colors
+$blk: #000000;
+$grey: #666666;
+$lt-grey: #F8FCFD;
+$white: #FFFFFF;
+$dk-teal: #26383D;
+$ming: #407074;
+$terracotta:  #E76D60;
+$tan: #F0EAE4;
+
+// Link Attributes
+// $link-color: $lt-red;
+// $link-hover-color: $grey;
+$link-transition-speed: .15s;
+$trans: 0.3s linear;
+
+// Font Weight
+$thin: 100;
+$normal: 400;
+$bold: 700; 
+$black: 900;
+
+//Practice Area Base Height
+// $pa-base-height: 400px;
+$pa-base-height: fit-content;
+
+// Typography
+@font-face {
+    font-family: "Lato";
+    src: url("/wp-content/themes/postali-child/assets/fonts/lato/lato-regular-webfont.woff2") format("woff2"), 
+    url("/wp-content/themes/postali-child/assets/fonts/lato/lato-regular-webfont.woff") format("woff");
+    font-weight: $normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Lato";
+    src: url("/wp-content/themes/postali-child/assets/fonts/lato/lato-bold-webfont.woff2") format("woff2"), 
+    url("/wp-content/themes/postali-child/assets/fonts/lato/lato-bold-webfont.woff") format("woff");
+    font-weight: $bold;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Lato";
+    src: url("/wp-content/themes/postali-child/assets/fonts/lato/lato-black-webfont.woff2") format("woff2"), 
+    url("/wp-content/themes/postali-child/assets/fonts/lato/lato-black-webfont.woff") format("woff");
+    font-weight: $black;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Lexend";
+    src: url("/wp-content/themes/postali-child/assets/fonts/lexend/lexend-bold-webfont.woff2") format("woff2"), 
+    url("/wp-content/themes/postali-child/assets/fonts/lexend/lexend-bold-webfont.woff") format("woff");
+    font-weight: $bold;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Lexend";
+    src: url("/wp-content/themes/postali-child/assets/fonts/lexend/lexend-variable-font-wght.woff2") format("woff2"), 
+    url("/wp-content/themes/postali-child/assets/fonts/lexend/lexend-variable-font-wght.woff") format("woff");
+    font-weight: $thin;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Merriweather";
+    src: url("/wp-content/themes/postali-child/assets/fonts/merriweather/merriweather-bolditalic-webfont.woff2") format("woff2"), 
+    url("/wp-content/themes/postali-child/assets/fonts/merriweather/merriweather-bolditalic-webfont.woff") format("woff");
+    font-weight: $bold;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Merriweather";
+    src: url("/wp-content/themes/postali-child/assets/fonts/merriweather/merriweather-regular-webfont.woff2") format("woff2"), 
+    url("/wp-content/themes/postali-child/assets/fonts/merriweather/merriweather-regular-webfont.woff") format("woff");
+    font-weight: $normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+$lato: 'Lato', sans-serif;
+$lexend: 'Lexend', serif;
+$merriweather: 'Merriweather', serif;
+
+// $body-font-family: $overpass;
+// $body-text-color: $dk-blue;
+$body-line-height: 130%;
+
+

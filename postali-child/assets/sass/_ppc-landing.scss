@@ -1,0 +1,619 @@
+.page-template-page-ppc-landing,
+.page-template-page-ppc-landing-pmax,
+.page-template-page-ppc-landing-v2 {
+
+    p {
+        font-size: 18px;
+        line-height: 135%;
+    }
+    
+    #head-menu,
+    #head-mobile,
+    #header-top_sup,
+    #header-top_right,
+    #header-top_mobile,
+    .utility-bar,
+    footer {
+        display:none !important;
+    }
+
+    .header-cta-text {
+        font-weight: bold;
+    }
+    .container {
+        max-width: $desktop-md;
+        width:100%;
+        padding: 0 60px;
+        z-index: 1;
+        position: relative;
+        box-sizing: border-box;
+        display: flex;
+
+        @media screen and (max-width: $desktop-md) {
+            padding:0 50px ;
+        }
+
+        @media screen and (max-width: $tab-port) {
+            padding: 0 5% ;
+        }
+
+        @media screen and (max-width: $lg-phone) {
+            padding: 0 8% ;
+        }
+
+        &.wide {
+            max-width: 90%;
+            padding: 0 60px;
+            @media screen and (max-width:$desktop) {
+                max-width:100%;
+            }
+        }
+        
+        &.skinny {
+            padding:0 10%;
+            @media screen and (max-width:$tab-port) {
+                padding:0 60px;
+            }
+            @media screen and (max-width:$lg-phone) {
+                padding:0 30px;
+            }
+        }
+    }
+
+    #header-top {
+        top: 0;
+        height: 90px !important;
+    }
+
+    section {
+        padding: 80px 0;
+        @media screen and (max-width: $tab-port) {
+            padding: 60px 0;
+        }
+        @media screen and (max-width: $lg-phone) {
+            padding: 40px 0;
+        }
+        &#header {
+            background-size: cover !important;
+            padding:0;
+            margin-top: 90px;
+            background-position: center top;
+            background-repeat: no-repeat;
+            @include respond(lg-phone) {
+                background-image: none !important;
+                background-color: $dk-teal !important;
+            }
+            .mobile-banner {
+                display: none;
+                @include respond(lg-phone) {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+            p.header-cta-subtext {
+                font-size: 13px;
+            }
+
+            .mobile-spacer {
+                display:none;
+
+                @media screen and (max-width:$tab-port) {
+                    display:block;
+                    height: 230px;
+                }
+
+                @media screen and (max-width: $lg-phone) {
+                    height:200px;
+                }
+            }
+
+            @media screen and (max-width:$desktop) {
+                background-size: 115%;
+                background-position: right center;
+            }
+
+            @media screen and (max-width:$med-device) {
+                background-size: 145%;
+                background-position: right -100px center;
+                background-color: black;
+
+                .container {
+                    .columns {
+                        .column-50 {
+                            width:48% !important;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width:$tab-port) {
+                padding:20px 0 60px 0;
+                background-position: center center;
+                .container {
+                    .columns {
+                        .column-50 {
+                            width:100% !important;
+                        }
+                    }
+                }
+            }
+
+            .testimonial-img {
+                img {
+                    max-width: 250px;
+                    margin: 0 0 10px;
+
+                    @media screen and (max-width:$tab-port) {
+                        margin:0 auto;
+                    }
+                }
+            }
+
+            p.header-quote {
+                font-size: 28px;
+                font-style: italic;
+                font-weight: bold;
+                margin-bottom: 5px !important;
+
+                @media screen and (max-width:$tab-port) {
+                    text-align: center;
+                }
+            }
+
+            p.header-quote-author {
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: bold;
+
+                @media screen and (max-width:$tab-port) {
+                    text-align: center;
+                }
+            }
+            
+            @media screen and (max-width:$lg-phone) {
+                margin-top: 0px;
+                padding: 80px 0 50px;
+                background-color: black;
+                background-position: right top 160px;
+                background-size: 700px;
+
+                .spacer-15,
+                .spacer-30,
+                .spacer-60 {
+                    height:15px;
+                }
+
+                h1 {
+                    font-size: 28px;
+                    margin-bottom: 15px;
+                }
+                p {
+                    margin-bottom: 10px;
+                }
+            }
+
+            @media screen and (max-width:$phone) {
+                background-size: 650px;
+            }
+        }
+
+        &#benefits {
+
+            span.benefit-number {
+                display: flex;
+                height: 30px;
+                width: 30px;
+                background: $terracotta;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                color: $white;
+                font-size: 14px;
+                font-weight: bold;
+                font-family: $merriweather;
+                margin-bottom: 15px;
+            }
+        }
+
+        &#about {
+            #attorney-img {
+                .attorney_blocks {
+                    width: 100%;
+                    justify-content: flex-end;
+                    display: flex;
+
+                    @media screen and (max-width:$lg-phone) {
+                        flex-wrap: wrap;
+                    }
+
+                    a,
+                    span {
+                        width: auto;
+                        display: flex;
+                        width: 100%;
+                        justify-content: flex-end;
+                        @media screen and (max-width:$lg-phone) {
+                            justify-content: center;
+                        }
+                    }
+
+                    a {
+                        position: relative;
+                    }
+                }
+                
+                &.column-50 {
+                    .attorney-img {
+                        width: 90%;
+                        margin: 0 5%;
+                        background: $ming;
+                        padding: 0;
+                        border-radius: 23px;
+                        margin-bottom: 25px;
+                        overflow: hidden;
+                        img {
+                            object-fit: contain;
+                            object-position: right bottom;
+                        }
+
+                        @media screen and (max-width:$lg-phone) {
+                            margin: 20px 0;
+                            width: 100%;
+                        }
+                    }
+                }
+                &.column-33 {
+                    .attorney-img {
+                        width:90%;
+                    }
+                }
+            }
+            .spacer-60 {
+                @media screen and (max-width:$lg-phone) {
+                    height:25px;
+                }
+            }
+            .btn {
+                @media screen and (max-width:$lg-phone) {
+                    width: auto;
+                    display:flex;
+                }
+            }
+            .header-cta-text {
+                @media screen and (max-width:$lg-phone) {
+                    text-align: center;
+                }
+            }
+        }
+
+        &#on-page-cta {
+            padding:40px 0;
+            .column-full {
+                display:flex;
+                justify-content: center;
+                align-items: center;
+
+                @media screen and (max-width: $tab-port) {
+                    flex-wrap: wrap;
+                }
+
+                .left,
+                .right {
+                    margin: 0 5%;
+
+                    p.benefits-cta-headline {
+                        font-size: 32px;
+                        font-weight: bold;
+                        margin-bottom: 10px !important;
+
+                        @media screen and (max-width:$phone) {
+                            font-size: 26px;
+                        }
+                    }
+
+                    p.header-cta-text {
+                        margin-bottom: 0 !important;
+                    }
+
+                    p.header-cta-subtext {
+                        margin-bottom: 0;
+                    }
+                }
+
+                @media screen and (max-width: $tab-port) {
+                    .left {
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+
+                    .right {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        &#testimonials {
+            img {
+                margin: 0 auto;
+                max-width: 200px;
+            }
+            .star-rating {
+                display: inline-block;
+                font-size: 2.3rem;
+                margin-bottom: 20px;
+                letter-spacing: 1rem;
+                color: $terracotta;
+            }
+            .quote {
+                p {
+                    font-size: 22px;
+                }
+
+                .testimonial_author {
+                    font-size:15px;
+                    color:$terracotta;
+                }
+            }
+        }
+
+        &#our-awards {
+            padding:40px 0;
+            .columns {
+                align-items: normal;
+                .column-full {
+                    justify-content: center;
+                    display:flex;
+                    align-items: center;
+                    @media screen and (max-width:$lg-phone) {
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        justify-content: center;
+                    }
+                    .ppc-awards {
+                        width: 100%;
+                        
+                    }
+                    .award-img {
+                        display: block;
+                        background: $ming;
+                        margin-right: 20px;
+                        border-radius: 23px;
+                        .img-wrap {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            // width: 380px;
+                            width: auto;
+                            height: 200px;
+                            img {
+                                object-fit: contain;
+                                height: 70px;
+                                width: 85%;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        &#results {
+            h2 {
+                text-align: center;
+            }
+
+            h3 {
+                margin-bottom: 10px !important;
+            }
+        }
+        
+        .footer-cta-form {
+            .input {
+                input,
+                textarea {
+                    width: 100%;
+                    margin:0;
+                }
+                .label {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        &#page-footer {
+            padding:40px 0 ;
+            picture.custom-logo img {
+                margin: 0;
+                max-width: 250px;
+            }
+            .logo-container {
+                margin-bottom: 0 !important;
+                margin-bottom: 0;
+                z-index: 2;
+                p:first-of-type {
+                    max-width: 240px;
+                    @include respond(small-phone) {
+                        max-width: 100%;
+                    }
+                }
+                .custom-logo-link {
+                    width: 100%;
+                    height: auto;
+                    display:flex;
+                    .custom-logo {
+                        max-height: 74px;
+                        max-width: 340px;
+                    }
+                }
+            }
+        }
+    }
+
+    // columns and spacers //
+    .columns {
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        align-items: center;
+        box-sizing: border-box;
+        align-items: flex-start;
+        .column-20,
+        .column-25,
+        .column-50,
+        .column-75,
+        .column-full,
+        .column-33,
+        .column-66 {
+            display:block;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .column-break {
+            width:100%;
+            height:1px;
+        }
+        .column-20 {
+            width:19.5%;
+        }
+        .column-25 {
+            width:23%;
+        }
+        .column-50 {
+            width:45%;
+
+            &.first {
+                @media screen and (max-width:$med-device) {
+                    margin-bottom: 0;
+                }
+            }
+
+            &.last-of-type {
+                @media screen and (max-width:$med-device) {
+                    display:none;
+                }
+            }
+        }
+        .column-33 {
+            width:30%;
+        }
+        .column-66 {
+            width:63%;
+        }
+        .column-75 {
+            width:66%;
+        }
+        .column-full {
+            width:100%;
+            justify-content: space-between;
+        }
+        .column-25,
+        .column-50,
+        .column-75,
+        .column-full,
+        .column-33,
+        .column-66 {
+            @media screen and (max-width:$med-device) {
+                width:100%;
+            }
+            &.center {
+                margin:0 auto;
+            }
+            &.centered {
+                text-align: center;
+            }
+        }
+    }
+
+    // spacing elements //
+    .spacer-break,
+    .spacer-line,
+    .spacer-15,
+    .spacer-30,
+    .spacer-60,
+    .spacer-90 {
+        display:block;
+        width:100%;
+
+        &.mobile {
+            height:15px;
+        }
+    }
+    .spacer-break { height:1px; }
+    .spacer-line { height:1px; border-bottom:1px solid $white; margin:30px 0; width: 100%; }
+    .spacer-15 { height:15px; }
+    .spacer-30 { height:30px; }
+    .spacer-60 { height:60px; }
+    .spacer-90 { height:90px; }
+
+    // font styles, misc styling
+    .container {
+        .columns {
+            p {
+                margin-bottom: 30px;
+            }
+            .testimonial-img {
+                img{
+                    max-width: 300px;
+                    margin: 0 auto;
+                }
+            }
+            .stars {
+                color: #24aae2;
+                margin: 30px 0 15px;
+                display: block;
+                font-size: 24px;
+            }
+        }
+    }
+    .gfield {
+        margin-bottom: 20px;
+    }
+    .gfield_label, .gform-field-label {
+        font-family: $merriweather;
+        color: $white !important;
+    }
+    .gfield_required {
+        display: none !important;
+    }
+    #icw {
+        display: none !important;
+    }
+}
+
+.page-template-page-ppc-landing-v2 {
+    #header {
+        position: relative;
+        &:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgb(38,56,61);
+            background: linear-gradient(180deg, rgba(38,56,61,0.22875087535014005) 0%, rgba(38,56,61,1) 68%);
+        }
+        .gform_wrapper {
+            background:  $white;
+            padding: 10px 30px;
+            margin-top: 30px;
+            .gform-field-label {
+                color: $dk-teal !important;
+            }
+            input, textarea {
+                border-bottom: solid 1px $dk-teal;
+                border-radius: 0 !important;
+            }
+            input[type="submit"] {
+                width: 100%;
+                max-width: 100%;
+                border-bottom: 0;
+            }
+        }
+    }
+}
