@@ -18,27 +18,27 @@ jQuery( function ( $ ) {
   		autoplaySpeed: 3000,
   		speed: 1300,
 		slidesToShow: 4,
-		slidesToScroll: 1,
+		slidesToScroll: 4,
 		responsive: [
 			{
 			breakpoint: 1500,
 				settings: {
 					slidesToShow: 3,
-					slidesToScroll: 1
+					slidesToScroll: 3,
 				}
 			},
 			{
 			breakpoint: 1200,
 				settings: {
 					slidesToShow: 2,
-					slidesToScroll: 1
+					slidesToScroll: 2,
 				}
 			},
 			{
 			breakpoint: 992,
 				settings: {
 					slidesToShow: 1,
-					slidesToScroll: 1
+					slidesToScroll: 1,
 				}
 			}
 		]
