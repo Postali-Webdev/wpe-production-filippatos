@@ -108,7 +108,11 @@ $actual_phone_number = get_field('actual_phone_number', 'options');
                         <?php endif; ?>
                     </div>
                     <p class="copyright"><?php the_field('copyright', 'options'); ?></p>
-                    <div class="footer-resources"><?php wp_nav_menu( [ 'container' => false, 'theme_location' => 'footer-resources' ] ); ?> <p class="copyright-year">Copyright &copy; <?php echo date('Y'); ?> Filippatos PLLC. All rights reserved.</p></div>
+                    <div class="footer-resources">
+                        <nav>
+                        <?php wp_nav_menu( [ 'container' => false, 'theme_location' => 'footer-resources' ] ); ?> <p class="copyright-year">Copyright &copy; <?php echo date('Y'); ?> Filippatos PLLC. All rights reserved.</p>
+                        </nav>
+                    </div>
                     <?php if(is_page_template('front-page.php')) { ?>
                     <div class="spacer-30"></div>
                     <a href="https://www.postali.com" title="Site design and development by Postali" target="blank" style="margin-bottom:0 !important;"><img src="https://www.postali.com/wp-content/themes/postali-site/img/postali-tag-reversed.png" alt="Postali | Results Driven Marketing" style="display:block; max-width:250px; margin:0;"></a>
