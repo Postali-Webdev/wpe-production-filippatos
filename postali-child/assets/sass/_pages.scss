@@ -61,6 +61,44 @@
             }
         }
     }
+
+    .community-involvement {
+        .intro-block {
+            background: $white;
+            border-radius: 20px;
+
+            .top-copy {
+                padding: 40px;
+                box-sizing: border-box;
+            }
+
+            img {
+                border-radius: 0 0 20px 20px;
+            }
+        }
+
+        .column-66 {
+            ul {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                list-style-type: none;
+                margin: 0;
+                gap: 30px;
+
+                li {
+                    margin: 0 !important;
+
+                    a {
+                        font-weight: 900;
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Single Attorney Template

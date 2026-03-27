@@ -50,6 +50,44 @@ get_header();?>
     </div>
 </section>
 
+<section class="community-involvement tan-bg">
+    <div class="container">
+        <div class="columns">
+            <div class="column-33 intro-block">
+                <div class="top-copy">
+                    <h2><?php the_field('ci_panel_headline'); ?></h2>
+                    <p><?php the_field('ci_intro_copy'); ?></p>
+                </div>
+                <?php 
+                $image = get_field('ci_panel_image');
+                if( !empty( $image ) ): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <?php endif; ?>
+            </div>
+            <div class="column-66">
+                <?php if( have_rows('ci_organizations') ): ?>
+                <ul>
+                <?php while( have_rows('ci_organizations') ): the_row(); ?>  
+                    <?php 
+                    $link = get_sub_field('link');
+                    if( $link ): 
+                        $link_url = $link['url'];
+                        $link_title = $link['title'];
+                        $link_target = $link['target'] ? $link['target'] : '_self';
+                        ?>
+                        <li>
+                            <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a><br>
+                            <p><?php the_sub_field('copy'); ?></p>
+                        </li>
+                    <?php endif; ?>
+                <?php endwhile; ?>
+                </ul>
+                <?php endif; ?> 
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="panel-3" class="dk-teal-bg">
     <div class="container">
         <div class="columns">
