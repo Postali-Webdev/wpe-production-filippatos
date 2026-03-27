@@ -67,6 +67,12 @@
             background: $white;
             border-radius: 20px;
 
+            h2 {
+                span {
+                    color:$terracotta;
+                }
+            }
+
             @include respond(desktop) {
                 width: 47%;
             }
