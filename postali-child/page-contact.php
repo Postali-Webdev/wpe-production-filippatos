@@ -110,6 +110,9 @@ get_header();?>
                         <a target="_blank" title="fill out our contact form online" href="<?php _e($form_cta['url']); ?>" class="btn"><?php _e($form_cta['title']); ?></a>
                     </div> 
                 </div> -->
+
+                <div class="spacer-30"></div>
+                <a href="https://lp.constantcontactpages.com/sl/YEHkHZ3/Filippatospllc" class="btn" target="blank">Subscribe to Our Newsletter</a>
             </div>
         </div>
     </section>

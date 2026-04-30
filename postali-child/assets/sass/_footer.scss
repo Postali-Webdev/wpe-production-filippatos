@@ -12,7 +12,8 @@ footer {
             max-width: 100% !important;
         }
         .custom-logo {
-            filter: invert(1) brightness(2);
+            -webkit-filter: invert(1) brightness(2);
+                    filter: invert(1) brightness(2);
             margin-right: 20px !important;
         }
         p {
@@ -33,11 +34,64 @@ footer {
             }
             
         }
+
+        .column-75 {
+            @include respond(desktop) {
+                width: 100%;
+            }
+        }
+
         .cta-wrapper {
+            display: grid;
+            justify-content: flex-start;
+            grid-template-columns: auto 50px auto;
+
+            @include respond(tab-port) {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .cta-buttons {
+                display: grid;
+                gap: 15px;
+
+                .btn {
+                    margin: 0;
+                    max-width: 100%;
+                    box-sizing: border-box;
+
+                    @include respond(tab-port) {
+                        max-width: 300px;
+                        width: 100%;
+                    }
+
+                    @include respond(phone) {
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                    
+                    &.small {
+                        background-color: $white;
+                        color: $blk;
+                        padding: 10px 20px;
+                        font-size: 15px;
+
+                        @include respond(tab-port) {
+                            padding: 10px 25px;
+                        }
+
+                        &:hover {
+                            background-color: $dk-teal;
+                            color:$white;
+                        }
+                    }
+                }
+            }
+            
             .divide {
                 display: block;
                 width: 2px;
-                height: 88px;
+                height: 100%;
                 background: $white;
                 margin: 0 40px 0 20px;
             }
@@ -76,7 +130,8 @@ footer {
                         background-size: contain;
                         width: 13px;
                         height: 13px;
-                        filter: invert(1);
+                        -webkit-filter: invert(1);
+                                filter: invert(1);
                         position: absolute;
                         right: -20px;
                     }
@@ -94,7 +149,11 @@ footer {
                     height: 100%;
                 }
                 .footer-award-wrapper {
+                    width: -webkit-fit-content;
+                    width: -moz-fit-content;
                     width: fit-content;
+                    height: -webkit-fit-content;
+                    height: -moz-fit-content;
                     height: fit-content;
                     position: absolute;
                     bottom: 175px;
@@ -108,7 +167,8 @@ footer {
                     img {
                         width: 125px;
                         height: auto;
-                        object-fit: contain;
+                        -o-object-fit: contain;
+                           object-fit: contain;
                         margin: 0 0 0 auto;
                     }
                 }

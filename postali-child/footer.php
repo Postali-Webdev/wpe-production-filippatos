@@ -19,7 +19,10 @@ $actual_phone_number = get_field('actual_phone_number', 'options');
                 <div class="column-75 direction-col">
                     <h2><?php the_field('pre_footer_title', 'options'); ?></h2>
                     <div class="cta-wrapper">
-                        <a aria-label="call our office at <?php _e( $vanity_phone_number ); ?>" title="call our office at <?php _e( $vanity_phone_number ); ?>"  href="tel:<?php _e( $actual_phone_number ); ?>" class="btn"><?php _e( $vanity_phone_number ); ?></a>
+                        <div class="cta-buttons">
+                            <a aria-label="call our office at <?php _e( $vanity_phone_number ); ?>" title="call our office at <?php _e( $vanity_phone_number ); ?>"  href="tel:<?php _e( $actual_phone_number ); ?>" class="btn"><?php _e( $vanity_phone_number ); ?></a>
+                            <a aria-label="subscribe to our newsletter" title="subscribe to our newsletter"  href="https://lp.constantcontactpages.com/sl/YEHkHZ3/Filippatospllc" target="blank" class="btn small">Subscribe to our Newsletter</a>
+                        </div>
                         <span class="divide"></span>
                         <p><?php the_field('pre_footer_copy', 'options'); ?></p>
                     </div>
