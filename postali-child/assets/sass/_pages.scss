@@ -62,6 +62,27 @@
         }
     }
 
+    #four {
+        h4 {
+            color:#091E24 !important;
+            margin-bottom: 5px;
+        }
+
+        .column-25 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+
+            h3 {
+                margin: 0 !important;
+            }
+
+            img {
+                max-width: 125px;
+            }
+        }
+    }
+
     .community-involvement {
         .intro-block {
             background: $white;

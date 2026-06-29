@@ -46,6 +46,50 @@ get_header();?>
                 <img src="<?php _e($p1_image['url']); ?>" alt="<?php _e($p1_image['alt']); ?>" title="<?php _e($p1_image['title']); ?>">
             </div>
         </div>
+    </div>
+</section>
+
+<section class="ming-bg" id="four">
+    <div class="container">
+        <div class="columns">
+            <div class="column-50 block">
+                <h4><?php the_field('i_subheadline'); ?></h4>
+                <h2><?php the_field('i_headline'); ?></h2>
+                <p><?php the_field('i_intro_copy'); ?></p>
+                <?php 
+                $link = get_field('i_button');
+                if( $link ): 
+                    $link_url = $link['url'];
+                    $link_title = $link['title'];
+                    $link_target = $link['target'] ? $link['target'] : '_self';
+                    ?>
+                    <a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                <?php endif; ?>
+            </div>
+        </div>
+        <div class="spacer-60"></div>
+        <div class="columns">
+            <?php if( have_rows('i_icon_blocks') ): ?>
+            <?php while( have_rows('i_icon_blocks') ): the_row(); ?>  
+                <div class="column-25">
+                    <?php 
+                    $image = get_sub_field('icon');
+                    if( !empty( $image ) ): ?>
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <?php endif; ?>
+
+                    <h3><?php the_sub_field('block_headline'); ?></h3>
+                    <p><?php the_sub_field('block_copy'); ?></p>
+                </div>
+            <?php endwhile; ?>
+            <?php endif; ?> 
+        </div>
+    </div>
+</section>
+
+<section id="panel-2a" class="tan-bg">
+    <span id="main-content"></span>
+    <div class="container">
         <?php get_template_part('block', 'cases-won', [ 'data' => ['copy' => $cases_group['copy']] ]); ?>
     </div>
 </section>
