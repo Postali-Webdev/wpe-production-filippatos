@@ -49,7 +49,7 @@ get_header();?>
     </div>
 </section>
 
-<section class="ming-bg" id="four">
+<section class="ming-bg" id="four" >
     <div class="container">
         <div class="columns">
             <div class="column-50 block">
