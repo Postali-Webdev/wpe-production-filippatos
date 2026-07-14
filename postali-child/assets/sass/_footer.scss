@@ -23,7 +23,7 @@ footer {
     #pre-footer {
         background-image: url('/wp-content/uploads/2023/01/background-icon-logo-teal.svg');
         background-repeat: no-repeat;
-        background-size: 525px;
+        background-size: 450px;
         background-position: bottom -55px right -35px;
         @include respond(tab-port) {
             background-position: bottom -60px left -180px;
