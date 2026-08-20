@@ -12,6 +12,19 @@ jQuery( function ( $ ) {
 	"use strict";
 	var windowWidth = $(window).outerWidth();
 
+    
+
+    $('.upcoming-events').slick({
+		infinite: true,
+		autoplay: false,
+  		autoplaySpeed: 3000,
+  		speed: 1300,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+        arrows:true,
+        fade:true
+	});
+
 	$('#attorney-slider').slick({
 		infinite: true,
 		autoplay: true,

@@ -18,7 +18,7 @@ if( $attorney_query->have_posts() ) : ?>
 <div id="attorney-slider">
     <?php while( $attorney_query->have_posts() ) : $attorney_query->the_post(); 
         // ACF Fields
-        $attorney_img = get_field('attorney_image');
+        $attorney_img = get_field('attorney_image_scroller');
         $middle_initial = get_field('middle_initial') ? " " . get_field('middle_initial') . " " : " ";
         $attorney_name = get_field('first_name') . $middle_initial . get_field('last_name');
         $attorney_id = strtolower(str_replace([' ', '.'], ['-', ''], $attorney_name));

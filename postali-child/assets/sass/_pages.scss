@@ -1193,6 +1193,7 @@
 .page-template-default, .page-template-page-individual-media-mentions, .post-type-archive-job_postings, .single-job_postings {
     #hero {
         padding-top: 0;
+        
         h1, p:not(#breadcrumbs) {
             text-align: center;
             margin: 0 auto;
@@ -1203,6 +1204,222 @@
         p {
             text-align: left !important;
             margin: 0 0 20px 0 !important;
+        }
+    }
+}
+
+.page-template-page-events {    
+     #hero {
+        padding-top: 0;
+        padding-bottom: 0;
+        
+        h1, p:not(#breadcrumbs) {
+            text-align: left;
+            margin: 0 auto;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        p {
+            text-align: left !important;
+            margin: 0 0 20px 0 !important;
+        }
+
+        .columns {
+            display: grid;
+            grid-template-columns: 6fr 5fr;
+            align-items: normal;
+
+            @include respond(tab-port) {
+                display: flex;
+                grid-template-columns: 1fr;
+                align-items: normal;
+                flex-direction: column-reverse;
+            }
+
+            .column-50 {
+                width: 100%;
+            }
+
+            .img-container {
+                max-height: 575px;
+                display: block;
+                
+                img {
+                    height: 100%;
+                    width: 100%;
+                    -o-object-fit: cover;
+                       object-fit: cover;
+                }
+            }
+
+            .intro-container {
+                padding: 60px 0;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    .event {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        width: 100%;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+        
+        &:not(:last-of-type) {
+            margin-bottom: 40px;
+            border-bottom: 1px solid $blk;
+            padding-bottom: 40px;
+        }
+
+        .photo {
+            display:flex;
+            justify-content: space-between;
+            align-items: normal;
+
+            .img {
+                width: 100%;
+                border-radius: 10px;
+                max-height: 450px;
+                overflow:hidden;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    -o-object-fit: cover;
+                       object-fit: cover;
+                    -o-object-position: center;
+                       object-position: center;
+                }
+
+                &.two {
+                    width:48%;
+                }
+            }
+        }
+
+        .content {
+            grid-column-gap: 0;
+            padding-bottom: 0;
+            
+            .media-mention_info {
+                h2 {
+                    margin-bottom: 10px;
+                }
+                
+                h3 {
+                    color:$terracotta !important;
+                }
+            }
+
+            .desc {
+                p.read-more {
+                    text-decoration: underline;
+                    cursor: pointer;
+                    font-weight: lighter;
+                }
+                
+                .rest {
+                    display:none;
+                }
+            }
+        }
+    }
+
+    #panel-1 {
+        .upcoming-events {
+            width: 100%;
+
+            .event {
+                margin:0;
+                padding:0;
+                border:none;
+                display: flex;
+                margin:0 1%;
+
+                @include respond(tab-port) {
+                    display: flex;
+                    align-items: normal;
+                    flex-direction: column;
+                    margin:0 0 70px;
+                }
+
+                h2 {
+                    font-size: 30px;
+                    line-height: 120%;
+                }
+
+                h3 {
+                    color:$white !important;
+                    font-family: $merriweather;
+                    font-style: italic;
+                    font-size: 20px;
+                }
+            }
+
+            .slick-arrow.slick-next,
+            .slick-arrow.slick-prev {
+                background-color: #407074;
+                border-radius: 50%;
+                background-image:none;
+
+                &::after {
+                    position: absolute;
+                    top: 50%;
+                    left: 54%;
+                    transform: translate(-50%, -50%);
+                    width: 100%;
+                    height: 100%;
+                    content: "";
+                    background: url(/wp-content/uploads/2023/01/drw-chevron-right.svg);
+                    color: white;
+                    background-size: 20px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    -webkit-filter: invert(1);
+                            filter: invert(1);
+                }
+            }
+
+            .slick-arrow.slick-prev {
+                left: -2.5%;
+
+                @include respond(tab-land)  {
+                    left:-3.5%;
+                }
+
+                @include respond(tab-port)  {
+                    left: 0;
+                    bottom: 0;
+                    top: unset;
+                }
+
+                &::after {
+                    rotate:180deg;
+                    top: -50%;
+                    left: -54%;
+                }
+            }
+
+            .slick-arrow.slick-next {
+                right: -2.5%;
+
+                @include respond(tab-land)  {
+                    right:-3.5%;
+                }
+
+                @include respond(tab-port)  {
+                    left: 50px;
+                    right: unset;
+                    bottom: 0;
+                    top: unset;
+                }
+            }
         }
     }
 }

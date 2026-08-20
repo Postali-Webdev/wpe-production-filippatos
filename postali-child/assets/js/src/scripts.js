@@ -190,4 +190,16 @@ jQuery( function ( $ ) {
         $(this).replaceWith($video);
     });
 
+    //Toggle read more
+	$('.read-more').click(function() {
+        $(this).next('.rest').slideToggle(400);
+        $(this).addClass('active');
+	});
+	 
+	//Close navigation on anchor tap
+	$('.read-more.active').click(function() {	
+		$(this).next('.rest').slideUp(400);
+        $(this).removeClass('active');
+	});	
+
 });
